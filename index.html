@@ -52,8 +52,8 @@
             color: var(--color-blue);
             border-bottom: 5px solid orange;
         }
-        
-        #header #logo{
+
+        #header #logo {
             width: 100%;
             max-width: 200px;
             min-width: 150px;
@@ -88,6 +88,13 @@
             max-width: 100% !important;
             width: 100%;
         }
+
+        /* mobile query */
+        @media (max-width: 768px) {
+            .header-text h1 {
+                line-height: 3.5rem;
+            }
+        }
     </style>
 </head>
 
@@ -96,8 +103,7 @@
         <header class="row" id="header">
             <div class="col-4 p-5">
                 <div style="transform: scale(1)">
-                    <svg id="logo"
-                        viewBox="0 0 369.7687366167023 41.48026336385588" class="looka-1j8o68f">
+                    <svg id="logo" viewBox="0 0 369.7687366167023 41.48026336385588" class="looka-1j8o68f">
                         <defs id="SvgjsDefs2033"></defs>
                         <g id="SvgjsG2034" featurekey="symbolFeature-0"
                             transform="matrix(0.7420440977148486,0,0,0.7420440977148486,-23.98657319409361,-16.399176257902308)"
