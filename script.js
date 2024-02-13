@@ -94,6 +94,7 @@ function viewLVL(lvl = 1) {
 
 FORMULARIO.addEventListener("change", function (e) {
     // ID INPUT : KEY OBJECT
+    console.log(e.target.id, e.target.value)
     const fieldMappings = {
         edad: "edadAccidente",
         anio: "fechaAccidente",
@@ -101,6 +102,7 @@ FORMULARIO.addEventListener("change", function (e) {
         condicion: "condicion",
         colision: "tipoColision",
         matricula: "matricula",
+
     };
 
     const fieldName = e.target.id;
