@@ -147,6 +147,10 @@ FORMULARIO.addEventListener("change", function (e) {
         e.target.id === "si" ? viewLVL(3, false) : viewLVL(3);
     }
 
+    if(NeedDias && e.target.id === "dias" && e.target.value !== ""){ 
+        viewLVL(3);
+    }
+
     if (DATA.edadAccidente && DATA.provincia && DATA.fechaAccidente) {
         viewLVL(2);
     }
