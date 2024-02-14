@@ -53,10 +53,12 @@
             font-weight: 800;
             font-size: 2.5rem;
         }
-
-        .header-text span {
-            color: var(--color-blue);
+        .card-landing span,.header-text span{
             border-bottom: 5px solid orange;
+        }
+
+        .header-text span{
+            color: var(--color-blue);
         }
 
         #header #logo {
@@ -79,6 +81,12 @@
         input {
             border: 1px solid #1e7998 !important;
         }
+        .bg-blue{
+            background: #1e7998 !important;
+        }
+        .bg-blue:hover{
+            background: #155e77 !important;
+        }
 
         #header a {
             color: white;
@@ -95,14 +103,26 @@
             width: 100%;
         }
 
+        .bootstrap-select button{
+            height: 60px;
+            vertical-align: middle;
+            padding-top:17px;
+        }
+
+        .form-control{
+            min-height: 60px;
+        }
+
         /* mobile query */
         @media (max-width: 768px) {
-            .header-text h1 {
+            .header-text h1,.card-landing h3 {
                 line-height: 3.5rem;
             }
             .text-center-sm{
                 text-align: center;
             }
+
+
         }
     </style>
 </head>
@@ -190,7 +210,7 @@
                         </div>
                         <div class="col-md-4 p-3">
                             <label for="year" class="form-label">Edad en el momento del accidente</label>
-                            <input class="form-control" type="number" style="min-height: 42px" id="edad"
+                            <input class="form-control" type="number"  id="edad"
                                 placeholder="Escribe tu edad" />
                         </div>
                     </div>
@@ -211,7 +231,7 @@
                         </div>
                         <div class="col-md-4 p-3 d-none" id="div_matricula">
                             <label for="year" class="form-label">Matricula </label>
-                            <input class="form-control" style="min-height: 42px" type="text" id="matricula"
+                            <input class="form-control" type="text" id="matricula"
                                 placeholder="1234ABC" />
                         </div>
                         <div class="col-12 text-center p-3">
@@ -229,7 +249,7 @@
                             </div>
                             <div class="col-md-12 p-3 d-none" id="dias">
                                 <div class="col-md-6 m-auto">
-                                    <input class="form-control" type="number" style="min-height: 42px" id="dias"
+                                    <input class="form-control" type="number" id="dias"
                                         placeholder="Escribe los días" />
                                 </div>
                             </div>
@@ -239,22 +259,22 @@
                         <!-- Nombre email y telefono -->
                         <div class="col-md-4">
                             <label for="year" class="form-label">Nombre</label>
-                            <input class="form-control" type="text" style="min-height: 42px" id="nombre"
+                            <input class="form-control" type="text" id="nombre"
                                 placeholder="Escribe tu nombre" />
                         </div>
                         <div class="col-md-4">
                             <label for="year" class="form-label">Email</label>
-                            <input class="form-control" type="email" style="min-height: 42px" id="email"
+                            <input class="form-control" type="email" id="email"
                                 placeholder="Escribe tu email" />
                         </div>
                         <div class="col-md-4">
                             <label for="year" class="form-label">Teléfono</label>
-                            <input class="form-control" type="tel" style="min-height: 42px" id="telefono"
+                            <input class="form-control" type="tel" id="telefono"
                                 placeholder="Escribe tu teléfono" />
                         </div>
                     </div>
                     <div class="col-12 text-center m-3">
-                        <button type="submit" class="btn btn-primary col-md-5 m-auto p-3">
+                        <button type="submit" class="btn bg-blue text-white col-md-5 m-auto p-3 fw-bold fs-5">
                             Calcular indemnización
                         </button>
                     </div>
@@ -268,14 +288,14 @@
 
     <div class="container">
 
-        <div class="card-text mt-5">
+        <div class="card-text mt-5 mb-5">
             <div class="row">
                 <div class="col-md-4 text-center p-3 align-middle d-none d-sm-block">
-                    <img src="calculator.svg" class="img-fluid align-middle d-sm-block" alt="">
+                    <img src="calculator.svg" class="img-fluid align-middle d-sm-block m-auto p-2" alt="">
                 </div>
-                <div class="col-md-8 p-4 text-white text-center-sm">
-                    <h3 class="display-5  fw-bold">Calculadora indemnización accidente</h3>
-                    <p class="lh-lg">Calcula la indemnización que te corresponde por un accidente de tráfico. Rellena los datos del
+                <div class="col-md-8 p-4 text-white text-center-sm card-landing">
+                    <h3 class="display-5 fw-bold p-2">Calculadora <span>indemnización</span> accidente</h3>
+                    <p class="lh-lg p-2">Calcula la <span>indemnización</span>  que te corresponde por un accidente de tráfico. Rellena los datos del
                         accidente y te diremos la cantidad que te corresponde.</p>
                 </div>
             </div>
