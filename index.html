@@ -19,18 +19,24 @@
 
         :root {
             --color-blue: #2899bf;
+            --radius: 1rem;
         }
 
         body {
             font-family: "Montserrat", sans-serif;
         }
 
-        .background {
+        .background,.card-text {
             background-color: #175b72;
+        }
+
+        .card-text{
+            border-radius: var(--radius);
         }
 
         .form-header {
             max-width: 918px;
+            border-radius: var(--radius);
         }
 
         .form-header .card-header {
@@ -93,6 +99,9 @@
         @media (max-width: 768px) {
             .header-text h1 {
                 line-height: 3.5rem;
+            }
+            .text-center-sm{
+                text-align: center;
             }
         }
     </style>
@@ -255,6 +264,27 @@
                 </form>
             </div>
         </div>
+    </div>
+
+    <div class="container">
+
+        <div class="card-text mt-5">
+            <div class="row">
+                <div class="col-md-4 text-center p-3 align-middle d-none d-sm-block">
+                    <img src="calculator.svg" class="img-fluid align-middle d-sm-block" alt="">
+                </div>
+                <div class="col-md-8 p-4 text-white text-center-sm">
+                    <h3 class="display-5  fw-bold">Calculadora indemnización accidente</h3>
+                    <p class="lh-lg">Calcula la indemnización que te corresponde por un accidente de tráfico. Rellena los datos del
+                        accidente y te diremos la cantidad que te corresponde.</p>
+                </div>
+            </div>
+
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3"></div>
     </div>
 
     <script src="script.js"></script>
